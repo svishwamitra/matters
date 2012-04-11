@@ -91,5 +91,16 @@ module Matters
         format.json { head :no_content }
       end
     end
+    
+    private
+        
+    def like  
+      if ActiveRecord::Base.connection.adapter_name.downcase == 'postgresql'
+        'ilike'
+      else
+        'like'
+      end
+    end
+    
   end
 end
