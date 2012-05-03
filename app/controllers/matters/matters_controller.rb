@@ -45,7 +45,7 @@ module Matters
     def edit
       @matter = Matter.find(params[:id])
       @matters = Matter.where("parent_id !=#{@matter.id}")
-      @matter_contact = [@matter.contact]
+      @matter_contact = @matter.contact.present? ? [@matter.contact] : []
     end
   
     # POST /matters

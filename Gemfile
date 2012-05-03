@@ -7,6 +7,7 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
+gem "jquery-ui-rails"
 gem "sqlite3"
 gem "will_paginate"
 gem 'bootstrap-will_paginate' 

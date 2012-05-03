@@ -4,7 +4,7 @@
   <%= f.input :name %>
   <%= f.input :brief %>
   <%= f.input :description, :as => :text, :row => 10, :col => 10 %>
-  <%= f.input :matter_date, :as => :date %>
+  <%= f.text_field :matter_date %>
   <%= f.input :client_access, :input_html => { :value => '0' } %><br/>
   <%= f.input :is_internal, :input_html => { :value => '0' } %><br/>
   <label>Select Parent Matter</label><%= f.collection_select :parent_id, @matters, :id, :name, :prompt => true %>
